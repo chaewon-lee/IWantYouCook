@@ -1,4 +1,4 @@
-package com.example.chaewon.iwantyoucook;
+package com.moco.wonchu.iwantyoucook;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.chaewon.iwantyoucook;
+package com.moco.wonchu.iwantyoucook;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
