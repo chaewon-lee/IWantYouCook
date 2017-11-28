@@ -26,7 +26,7 @@ public class MainActivity extends TabActivity {
         spec.setContent(intent);
         tabhost.addTab(spec);
 
-        intent= new Intent().setClass(this, RecipeActivity.class);
+        intent= new Intent().setClass(this, BookActivity.class);
         spec = tabhost.newTabSpec("TAB3").setIndicator("", getResources().getDrawable(R.drawable.ic_recipe));
         spec.setContent(intent);
         tabhost.addTab(spec);

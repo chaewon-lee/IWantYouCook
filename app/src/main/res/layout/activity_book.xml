@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Choose the Recipe"
+        android:textSize="35sp"
+        android:textColor="#1E90FF"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/korean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rice"
+        android:padding="0sp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:layout_below="@+id/info"
+        android:background="@android:color/transparent"
+        android:layout_alignLeft="@+id/info"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/koreanText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/asian"
+        android:layout_alignLeft="@+id/korean"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:text="Korean"
+        android:textSize="20sp"
+        android:textColor="#1E90FF"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/asian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/noodle"
+        android:padding="0sp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:layout_below="@+id/info"
+        android:background="@android:color/transparent"
+        android:layout_toRightOf="@+id/korean"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/asianText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/asian"
+        android:layout_alignLeft="@+id/asian"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="7dp"
+        android:text="Asian"
+        android:textSize="20sp"
+        android:textColor="#1E90FF"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/western"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hamburger"
+        android:padding="0sp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/koreanText"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@+id/korean"/>
+
+    <TextView
+        android:id="@+id/westernText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/western"
+        android:layout_alignLeft="@+id/western"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:text="Western"
+        android:textSize="20sp"
+        android:textColor="#1E90FF"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <ImageButton
+        android:id="@+id/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hearts"
+        android:padding="0sp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/asianText"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@+id/asian"/>
+
+    <TextView
+        android:id="@+id/favoriteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favorite"
+        android:layout_alignLeft="@+id/favorite"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:text="Favorite"
+        android:textSize="20sp"
+        android:textColor="#1E90FF"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

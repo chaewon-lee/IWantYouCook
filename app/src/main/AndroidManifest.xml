@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moco.wonchu.iwantyoucook">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_kitchen"
@@ -26,6 +28,7 @@
         <activity android:name="com.moco.wonchu.iwantyoucook.CookActivity"/>
         <activity android:name="com.moco.wonchu.iwantyoucook.MarketActivity"/>
         <activity android:name="com.moco.wonchu.iwantyoucook.ProfileActivity"/>
+        <activity android:name=".BookActivity"/>
     </application>
 
 </manifest>
