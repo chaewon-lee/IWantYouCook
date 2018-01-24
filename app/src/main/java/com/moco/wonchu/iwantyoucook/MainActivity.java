@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
 
     ViewPager pager;
@@ -77,47 +78,14 @@ public class MainActivity extends AppCompatActivity {
             return 4;
         }
     }
-}
 
-
-/*
-import android.app.TabActivity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.TabHost;
-import android.widget.TabHost.TabSpec;
-
-public class MainActivity extends TabActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void onStart(){
+        super.onStart();
 
-        TabHost tabhost = getTabHost();
-        Intent intent;
-        TabSpec spec;
+        RecipeFragment recipeFragment = new RecipeFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.root_layout, recipeFragment, recipeFragment.getTag()).commit();
 
-        intent= new Intent().setClass(this, CookFragment.class);
-        spec = tabhost.newTabSpec("TAB1").setIndicator("", getResources().getDrawable(R.drawable.ic_chef));
-        spec.setContent(intent);
-        tabhost.addTab(spec);
-
-        intent= new Intent().setClass(this, MarketFragment.class);
-        spec = tabhost.newTabSpec("TAB2").setIndicator("", getResources().getDrawable(R.drawable.ic_shopping_cart));
-        spec.setContent(intent);
-        tabhost.addTab(spec);
-
-        intent= new Intent().setClass(this, BookFragment.class);
-        spec = tabhost.newTabSpec("TAB3").setIndicator("", getResources().getDrawable(R.drawable.ic_recipe));
-        spec.setContent(intent);
-        tabhost.addTab(spec);
-
-        intent= new Intent().setClass(this, ProfileFragment.class);
-        spec = tabhost.newTabSpec("TAB4").setIndicator("", getResources().getDrawable(R.drawable.ic_cooker));
-        spec.setContent(intent);
-        tabhost.addTab(spec);
-
-        tabhost.setCurrentTab(0);
     }
 }
-*/

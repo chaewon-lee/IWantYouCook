@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/IWantYouCook.iml" filepath="$PROJECT_DIR$/.idea/IWantYouCook.iml" />
+      <module fileurl="file://C:\Users\l_949\AndroidStudioProjects\IWantYouCook_Master\.idea\IWantYouCook.iml" filepath="C:\Users\l_949\AndroidStudioProjects\IWantYouCook_Master\.idea\IWantYouCook.iml" />
       <module fileurl="file://C:\Users\lg\Downloads\Recipe-master (1)\IWantYouCook\IWantYouCook.iml" filepath="C:\Users\lg\Downloads\Recipe-master (1)\IWantYouCook\IWantYouCook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IWantYouCook_Master.iml" filepath="$PROJECT_DIR$/.idea/IWantYouCook_Master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\l_949\AndroidStudioProjects\IWantYouCook_Master\app\app.iml" filepath="C:\Users\l_949\AndroidStudioProjects\IWantYouCook_Master\app\app.iml" />
     </modules>
   </component>
 </project>
