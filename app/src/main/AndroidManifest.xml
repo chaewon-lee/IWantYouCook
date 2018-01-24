@@ -28,6 +28,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".WelcomeActivity"></activity>
+        <activity android:name=".RecipeListActivity"/>
+        <activity android:name=".RecipeActivity"/>
     </application>
 
 </manifest>
