@@ -1,6 +1,7 @@
 package com.moco.wonchu.iwantyoucook;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,14 +12,18 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.moco.wonchu.iwantyoucook.Helper.DBHelper;
+import com.moco.wonchu.iwantyoucook.Model.CategoryItem;
+
+import java.util.ArrayList;
+
 /**
  * Created by Chaewon on 2017-11-29.
  */
 
 
 public class BookFragment extends Fragment {
-    public BookFragment()
-    {
+    public BookFragment() {
         // required
     }
 
@@ -36,6 +41,9 @@ public class BookFragment extends Fragment {
 
                 container, false);
 
+        DBHelper dbHelper = new DBHelper(getContext(), "Recipes.db", null, 1);
+        final ArrayList<CategoryItem> categotyList = dbHelper.recipes_SelectCategory();
+
 
         ImageButton korean = (ImageButton) layout.findViewById(R.id.korean);
         ImageButton asian = (ImageButton) layout.findViewById(R.id.asian);
@@ -47,12 +55,13 @@ public class BookFragment extends Fragment {
         TextView westext = (TextView) layout.findViewById(R.id.westernText);
         TextView favtext = (TextView) layout.findViewById(R.id.favoriteText);
 
-        /*
+
         korean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookFragment.this, ListActivity.class);
-                intent.putExtra("BUTTON_ID", 1);
+                CategoryItem selectCategory = categotyList.get(1);
+                Intent intent = new Intent(getContext(), RecipeListActivity.class);
+                intent.putExtra("category", selectCategory.get_category());
                 startActivity(intent);
             }
         });
@@ -60,8 +69,9 @@ public class BookFragment extends Fragment {
         asian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookFragment.this, ListActivity.class);
-                intent.putExtra("BUTTON_ID", 2);
+                CategoryItem selectCategory = categotyList.get(0);
+                Intent intent = new Intent(getContext(), RecipeListActivity.class);
+                intent.putExtra("category", selectCategory.get_category());
                 startActivity(intent);
             }
         });
@@ -69,13 +79,14 @@ public class BookFragment extends Fragment {
         western.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BookFragment.this, ListActivity.class);
-                intent.putExtra("BUTTON_ID", 3);
+                CategoryItem selectCategory = categotyList.get(2);
+                Intent intent = new Intent(getContext(), RecipeListActivity.class);
+                intent.putExtra("category", selectCategory.get_category());
                 startActivity(intent);
             }
         });
 
-        favorite.setOnClickListener(new View.OnClickListener() {
+       /* favorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BookFragment.this, ListActivity.class);
@@ -85,6 +96,5 @@ public class BookFragment extends Fragment {
         });*/
 
         return layout;
-        }
-
     }
+}

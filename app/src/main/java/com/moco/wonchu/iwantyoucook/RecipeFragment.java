@@ -88,7 +88,7 @@ public class RecipeFragment extends Fragment {
             drawable = getResources().getDrawable(R.drawable.bolognese, getActivity().getTheme());
             byte[] bolognese = imageHelper.getByteArrayFromDrawable(drawable);
 
-            dbHelper.recipes_Insert("Itay", "Bolognese",
+            dbHelper.recipes_Insert("Western", "Bolognese",
                     "1. Put the onion and oil in a large pan and fry over a fairly high heat for 3-4 mins. Add the garlic and mince and fry until they both brown. Add the mushrooms and herbs, and cook for another couple of mins.\n" +
                             "2. Stir in the tomatoes, beef stock, tomato ketchup or purée, Worcestershire sauce and seasoning. Bring to the boil, then reduce the heat, cover and simmer, stirring occasionally, for 30 mins.\n" +
                             "3. Meanwhile, cook the spaghetti in a large pan of boiling, salted water, according to packet instructions. Drain well, run hot water through it, put it back in the pan and add a dash of olive oil, if you like, then stir in the meat sauce. Serve in hot bowls and hand round Parmesan cheese, for sprinkling on top.",
@@ -115,7 +115,7 @@ public class RecipeFragment extends Fragment {
             drawable = getResources().getDrawable(R.drawable.chickencacciatore, getActivity().getTheme());
             byte[] chickencacciatore = imageHelper.getByteArrayFromDrawable(drawable);
 
-            dbHelper.recipes_Insert("Itay", "Chicken Cacciatore ",
+            dbHelper.recipes_Insert("Western", "Chicken Cacciatore ",
                     "1. Combine the flour, salt and pepper in a plastic bag. Shake the chicken pieces in flour until coated. Heat the oil in a large skillet (one that has a cover/lid). Fry the chicken pieces until they are browned on both sides. Remove from skillet.\n" +
                             "2. Add the onion, garlic and bell pepper to the skillet and saute until the onion is slightly browned. Return the chicken to the skillet and add the tomatoes, oregano and wine. Cover and simmer for 30 minutes over medium low heat.\n" +
                             "3. Add the mushrooms and salt and pepper to taste. Simmer for 10 more minutes.",
@@ -142,7 +142,7 @@ public class RecipeFragment extends Fragment {
             drawable = getResources().getDrawable(R.drawable.abzhorka, getActivity().getTheme());
             byte[] abzhorka = imageHelper.getByteArrayFromDrawable(drawable);
 
-            dbHelper.recipes_Insert("Russia", "Abzhorka",
+            dbHelper.recipes_Insert("Western", "Abzhorka",
                     "1. Put the onion and oil in a large pan and fry over a fairly high heat for 3-4 mins. Add the garlic and mince and fry until they both brown. Add the mushrooms and herbs, and cook for another couple of mins.\n" +
                             "2. Stir in the tomatoes, beef stock, tomato ketchup or purée, Worcestershire sauce and seasoning. Bring to the boil, then reduce the heat, cover and simmer, stirring occasionally, for 30 mins.\n" +
                             "3. Meanwhile, cook the spaghetti in a large pan of boiling, salted water, according to packet instructions. Drain well, run hot water through it, put it back in the pan and add a dash of olive oil, if you like, then stir in the meat sauce. Serve in hot bowls and hand round Parmesan cheese, for sprinkling on top.",
@@ -164,7 +164,7 @@ public class RecipeFragment extends Fragment {
             drawable = getResources().getDrawable(R.drawable.beefstroganoff, getActivity().getTheme());
             byte[] beefstroganoff = imageHelper.getByteArrayFromDrawable(drawable);
 
-            dbHelper.recipes_Insert("Russia", "Beef Stroganoff",
+            dbHelper.recipes_Insert("Western", "Beef Stroganoff",
                     "Chop the meat long wise fibers (fibres) and beat the pieces a little. After that cut the pieces into stripes 2 cm long and 1/2 cm wide. Season and roll them in flour. Fry chopped onion in the pan and when it is gold brown, put the stripes there. Fry on hot heat until the meat is light brown. Make a sauce: fry 1 tb flour pounded with butter for few minutes, add sour cream, ketchup, salt. Pour the sauce over meat and stew on a low heat during 15-20 minutes. Don't let sauce to boil, overwise the meat will be hard. Beef Stroganoff is served with fried potatoes.\n",
                     "Beef stroganoff is a dish consisting of strips of lean beef sauteed and served in a sour-cream sauce with onions and mushrooms. Legend has it that when he was stationed in deepest Siberia, his chef discovered that the beef was frozen so solid that it could only be coped with by cutting it into very thin strips.",
                     beefstroganoff, beefstroganoff, 8);
@@ -180,6 +180,51 @@ public class RecipeFragment extends Fragment {
 
             for (int i = 0; i < beefstroganoffIngre.size(); i++) {
                 dbHelper.ingredients_Insert(beefstroganoffId, beefstroganoffIngre.get(i));
+            }
+
+            //set tomatoEgg
+            drawable = getResources().getDrawable(R.drawable.tomatoegg, getActivity().getTheme());
+            byte[] tomatoEgg = imageHelper.getByteArrayFromDrawable(drawable);
+
+            dbHelper.recipes_Insert("Asian", "Tomato Egg",
+                    "1.cut garlic and onion\n" +
+                            "2.fry garlic first\n" +
+                            "3.boil milk, cream, cheese \n" +
+                            "4.cook noodle for 15 min\n" +
+                            "5.put noodle, bacon, onion in sauce",
+                    "Chinese cuisine made with tomato and eggs.",
+                    tomatoEgg, tomatoEgg, 3);
+
+            int tomatoEggId = dbHelper.recipes_GetIdByName("tomatoEgg");
+            ArrayList<String> tomatoEggIngre = new ArrayList<>();
+            tomatoEggIngre.add("tomato");
+            tomatoEggIngre.add("egg");
+            tomatoEggIngre.add("salt");
+
+            for (int i = 0; i < tomatoEggIngre.size(); i++) {
+                dbHelper.ingredients_Insert(tomatoEggId, tomatoEggIngre.get(i));
+            }
+
+            //set colaChicken
+            drawable = getResources().getDrawable(R.drawable.colachicken, getActivity().getTheme());
+            byte[] colaChicken = imageHelper.getByteArrayFromDrawable(drawable);
+
+            dbHelper.recipes_Insert("Asian", "Cola Chicken",
+                    "1.boil chicken with green onion \n" +
+                            "2.throw water away\n" +
+                            "3.put coke and soy sauce",
+                    "Chinese cuisine made with cola and chicken.",
+                    colaChicken, colaChicken, 3);
+
+            int colaChickenId = dbHelper.recipes_GetIdByName("tomatoEgg");
+            ArrayList<String> colaChickenIngre = new ArrayList<>();
+            colaChickenIngre.add("coke");
+            colaChickenIngre.add("chicken");
+            colaChickenIngre.add("green onion");
+            colaChickenIngre.add("soy sauce");
+
+            for (int i = 0; i < colaChickenIngre.size(); i++) {
+                dbHelper.ingredients_Insert(colaChickenId, colaChickenIngre.get(i));
             }
         }
         return view;
