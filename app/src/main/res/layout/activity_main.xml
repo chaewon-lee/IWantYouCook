@@ -1,64 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.moco.wonchu.iwantyoucook.MainActivity">
+    android:layout_height="match_parent">
 
-    <TabHost
-        android:id="@android:id/tabhost"
+    <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="0dip"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:text="SEARCH"/>
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+        <Button
+            android:id="@+id/marketBtn"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="MARKET"
+            />
 
-                <LinearLayout
-                    android:id="@+id/home"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                </LinearLayout>
+        <Button
+            android:id="@+id/recipeBtn"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="RECIPE"
+            />
 
-                <LinearLayout
-                    android:id="@+id/book"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                </LinearLayout>
+        <Button
+            android:id="@+id/profileBtn"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PROFILE"
+            />
 
-                <LinearLayout
-                android:id="@+id/market"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/profile"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                </LinearLayout>
+    </LinearLayout>
 
-            </FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll"
+        >
+    </android.support.v4.view.ViewPager>
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-    </TabHost>
-
-</LinearLayout>
+</RelativeLayout>
