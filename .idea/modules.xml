@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IWantYouCook.iml" filepath="$PROJECT_DIR$/IWantYouCook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IWantYouCook.iml" filepath="$PROJECT_DIR$/.idea/IWantYouCook.iml" />
+      <module fileurl="file://C:\Users\lg\Downloads\Recipe-master (1)\IWantYouCook\IWantYouCook.iml" filepath="C:\Users\lg\Downloads\Recipe-master (1)\IWantYouCook\IWantYouCook.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
