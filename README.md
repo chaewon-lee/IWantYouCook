@@ -1,10 +1,5 @@
-Deprecated Application
+# I Want You Cook 
 
-See: https://github.com/chaewon-lee/recipe_iwantyoucook 
-Add Mobility into the open source project of shyjoo.
+<h1><b>Finding Recipes and nearby supermarkets with our application!</b></h1>
 
-For mobility: Use Google map API, Google places API
-possible functions:
-  - finding markets nearby me (needed location permission)
-  - finding cheap markets
-  - finding qualified markets
+We are providing amazing recipes: Korean, Asian, Western.
