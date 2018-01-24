@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "627353893945",
+    "project_id": "iwantyoucook"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627353893945:android:07a36cf80b343a13",
+        "android_client_info": {
+          "package_name": "com.moco.wonchu.iwantyoucook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627353893945-i9c547cbdfgeup7p9ba9r2geeh6p3d7q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moco.wonchu.iwantyoucook",
+            "certificate_hash": "4b4eb0aafaba2cc8af2c166a811f9d7f638f5a90"
+          }
+        },
+        {
+          "client_id": "627353893945-b07a7kkod0n2shscu2j4s2ip017k4ovm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvXzferyHobpZ_0ywmCvZD_r6pYWoXE10"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

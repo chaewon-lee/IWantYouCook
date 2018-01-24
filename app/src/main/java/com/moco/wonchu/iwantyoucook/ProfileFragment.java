@@ -26,7 +26,6 @@ public class ProfileFragment extends Fragment {
         RelativeLayout layout = (RelativeLayout) inflater.inflate(R.layout.fragment_profile,
 
                 container, false);
-
         return layout;
     }
 }
