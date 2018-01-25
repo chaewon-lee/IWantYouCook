@@ -184,7 +184,7 @@ public class DBHelper extends SQLiteOpenHelper
         return idRecipes;
 
     }*/
- 
+  
     //return the id of the recipes based on ingredientName TO FIX!
     public ArrayList<Integer> ingredients_selectIdRecipeByIngredientName(ArrayList<String> ingredientsName){
         // Open available reading database
