@@ -46,13 +46,13 @@ public class BookFragment extends Fragment {
 
 
         ImageButton korean = (ImageButton) layout.findViewById(R.id.korean);
-        ImageButton asian = (ImageButton) layout.findViewById(R.id.asian);
-        ImageButton western = (ImageButton) layout.findViewById(R.id.western);
+        ImageButton italian = (ImageButton) layout.findViewById(R.id.asian);
+        ImageButton russian = (ImageButton) layout.findViewById(R.id.western);
         ImageButton favorite = (ImageButton) layout.findViewById(R.id.favorite);
 
         TextView kortext = (TextView) layout.findViewById(R.id.koreanText);
-        TextView asitext = (TextView) layout.findViewById(R.id.asianText);
-        TextView westext = (TextView) layout.findViewById(R.id.westernText);
+        TextView italitext = (TextView) layout.findViewById(R.id.asianText);
+        TextView russiatext = (TextView) layout.findViewById(R.id.westernText);
         TextView favtext = (TextView) layout.findViewById(R.id.favoriteText);
 
 
@@ -66,7 +66,7 @@ public class BookFragment extends Fragment {
             }
         });
 
-        asian.setOnClickListener(new View.OnClickListener() {
+        italian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CategoryItem selectCategory = categotyList.get(0);
@@ -76,7 +76,7 @@ public class BookFragment extends Fragment {
             }
         });
 
-        western.setOnClickListener(new View.OnClickListener() {
+        russian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CategoryItem selectCategory = categotyList.get(2);
