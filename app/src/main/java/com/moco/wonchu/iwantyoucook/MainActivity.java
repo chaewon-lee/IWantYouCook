@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             switch(position)
             {
                 case 0:
-                    return new CookFragment();
+                    return new SearchFragment();
                 case 1:
                     return new MarketFragment();
                 case 2:

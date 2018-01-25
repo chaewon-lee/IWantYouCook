@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteStatement;
 
 import com.moco.wonchu.iwantyoucook.Model.CategoryItem;
 import com.moco.wonchu.iwantyoucook.Model.RecipeItem;
+import com.moco.wonchu.iwantyoucook.Model.SearchResultItem;
 
 import java.util.ArrayList;
 
@@ -228,7 +229,32 @@ public class DBHelper extends SQLiteOpenHelper
         return count;
     }
 
+    public ArrayList<SearchResultItem> ingredients_selectRecipeByIngredientName(ArrayList<String> ingredientsName){
+        // Open available reading database
+        SQLiteDatabase db = getReadableDatabase();
+        ArrayList<SearchResultItem> idRecipes = new ArrayList<>();
+        String strNames = "";
+        for (int i=0; i < ingredientsName.size(); i++)
+        {
+            strNames += "ingreName = '" + ingredientsName.get(i) + "'";
+            if (i != ingredientsName.size()-1)
+            {
+                strNames += " OR ";
+            }
+        }
 
+        Cursor cursor = db.rawQuery("SELECT recipeID, count(*) FROM INGREDIENTS WHERE "+
+                strNames + " GROUP BY recipeID", null);
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                idRecipes.add(new SearchResultItem(cursor.getInt(0), cursor.getInt(1)));
+            }
+        }
+        cursor.close();
+        db.close();
+        return idRecipes;
+
+    }
 
     public int recipes_GetIdByName(String name)
     {

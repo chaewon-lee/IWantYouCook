@@ -81,9 +81,9 @@
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ingr5"
+        android:layout_below="@+id/time"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="19dp"
         android:max="30"
         android:progress="5" />
 
@@ -134,9 +134,16 @@
         android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ingr5"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="190dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/medium"
         android:text="SEARCH" />
+
+    <Button
+        android:id="@+id/btAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/ingr1"
+        android:text="Pass" />
 
 </RelativeLayout>
