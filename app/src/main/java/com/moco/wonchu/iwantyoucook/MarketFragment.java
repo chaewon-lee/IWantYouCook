@@ -69,7 +69,7 @@ public class MarketFragment extends Fragment
     private Marker currentMarker = null;
     List<Marker> previous_marker = null;
     LatLng currentPosition;
-    Location mCurrentLocatiion;
+    Location mCurrentLocation;
     GpsInfo gps;
 
     private static final LatLng DEFAULT_LOCATION = new LatLng(47.667826, 9.171743); //htwg
@@ -400,7 +400,7 @@ public class MarketFragment extends Fragment
         //현재 위치에 마커 생성하고 이동
         setCurrentLocation(location, markerTitle, markerSnippet);
 
-        mCurrentLocatiion = location;
+        mCurrentLocation = location;
         searchCurrentPlaces();
     }
 
@@ -433,10 +433,12 @@ public class MarketFragment extends Fragment
                 placeLikelihoods.release();
 
                 Location location = new Location("");
+
                 location.setLatitude(LikelyLatLngs[0].latitude);
                 location.setLongitude(LikelyLatLngs[0].longitude);
 
                 setCurrentLocation(location, LikelyPlaceNames[0], LikelyAddresses[0]);
+
             }
         });
         Log.d(TAG, "OKAY searchCurrentPlaces");
