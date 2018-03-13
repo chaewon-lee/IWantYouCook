@@ -9,6 +9,7 @@ Easiest way to find nearby, cheapest, qualified market. No need to search Google
 <h3>Project for the course <i>Mobile Computing</i> in Winter Semester 2017/18.<h3>
 
 <h6>Authorized person: Chu Jinju, Lee Chaewon.
+
 Homepage: IWantYouCook https://iwantyoucook.tistory.com<h6>
 
 <h2><b>Used Tools and Technology<b><h2>
@@ -23,3 +24,7 @@ Homepage: IWantYouCook https://iwantyoucook.tistory.com<h6>
   3. Google Maps API/ Google Places API
     To provide mobility (thanks to Patrick), we used two google apis.
     </h6>
+    
+    
+    
+    Open source provided from https://github.com/shyjoo/Recipe
