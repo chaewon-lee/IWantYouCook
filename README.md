@@ -23,9 +23,9 @@ Homepage: IWantYouCook https://iwantyoucook.tistory.com</h6>
     
   3. Google Maps API/ Google Places API
     To provide mobility (thanks to Patrick), we used two google apis.
-    
+   </h6> 
     
     
     
     Open source provided from https://github.com/shyjoo/Recipe
-    </h6>
+    
